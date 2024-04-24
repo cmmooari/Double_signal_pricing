@@ -1,0 +1,118 @@
+New loadshape.S802b  npts=24 interval=[1] Pmult=[file=P_daily_S802b.csv] Qmult=[file=Q_daily_S802b.csv] UseActual=Yes
+New loadshape.S802c  npts=24 interval=[1] Pmult=[file=P_daily_S802c.csv] Qmult=[file=Q_daily_S802c.csv] UseActual=Yes
+New loadshape.S806b  npts=24 interval=[1] Pmult=[file=P_daily_S806b.csv] Qmult=[file=Q_daily_S806b.csv] UseActual=Yes
+New loadshape.S806c  npts=24 interval=[1] Pmult=[file=P_daily_S806c.csv] Qmult=[file=Q_daily_S806c.csv] UseActual=Yes 
+New loadshape.S808b  npts=24 interval=[1] Pmult=[file=P_daily_S808b.csv] Qmult=[file=Q_daily_S808b.csv] UseActual=Yes
+New loadshape.S810b  npts=24 interval=[1] Pmult=[file=P_daily_S810b.csv] Qmult=[file=Q_daily_S810b.csv] UseActual=Yes 
+New loadshape.S816b  npts=24 interval=[1] Pmult=[file=P_daily_S816b.csv] Qmult=[file=Q_daily_S816b.csv] UseActual=Yes
+New loadshape.S818a  npts=24 interval=[1] Pmult=[file=P_daily_S818a.csv] Qmult=[file=Q_daily_S818a.csv] UseActual=Yes
+New loadshape.S820a  npts=24 interval=[1] Pmult=[file=P_daily_S820a.csv] Qmult=[file=Q_daily_S820a.csv] UseActual=Yes
+New loadshape.S822a  npts=24 interval=[1] Pmult=[file=P_daily_S822a.csv] Qmult=[file=Q_daily_S822a.csv] UseActual=Yes
+New loadshape.S824b  npts=24 interval=[1] Pmult=[file=P_daily_S824b.csv] Qmult=[file=Q_daily_S824b.csv] UseActual=Yes
+New loadshape.S824c  npts=24 interval=[1] Pmult=[file=P_daily_S824c.csv] Qmult=[file=Q_daily_S824c.csv] UseActual=Yes
+New loadshape.S826b  npts=24 interval=[1] Pmult=[file=P_daily_S826b.csv] Qmult=[file=Q_daily_S826b.csv] UseActual=Yes
+New loadshape.S828a  npts=24 interval=[1] Pmult=[file=P_daily_S828a.csv] Qmult=[file=Q_daily_S828a.csv] UseActual=Yes
+New loadshape.S828c  npts=24 interval=[1] Pmult=[file=P_daily_S828c.csv] Qmult=[file=Q_daily_S828c.csv] UseActual=Yes
+New loadshape.S830a  npts=24 interval=[1] Pmult=[file=P_daily_S830a.csv] Qmult=[file=Q_daily_S830a.csv] UseActual=Yes
+
+New loadshape.S830b  npts=24 interval=[1] Pmult=[file=P_daily_S830b.csv] Qmult=[file=Q_daily_S830b.csv] UseActual=Yes
+New loadshape.S830c  npts=24 interval=[1] Pmult=[file=P_daily_S830c.csv] Qmult=[file=Q_daily_S830c.csv] UseActual=Yes 
+New loadshape.S832a  npts=24 interval=[1] Pmult=[file=P_daily_S832a.csv] Qmult=[file=Q_daily_S832a.csv] UseActual=Yes 
+New loadshape.S832b  npts=24 interval=[1] Pmult=[file=P_daily_S832b.csv] Qmult=[file=Q_daily_S832b.csv] UseActual=Yes 
+New loadshape.S832c  npts=24 interval=[1] Pmult=[file=P_daily_S832c.csv] Qmult=[file=Q_daily_S832c.csv] UseActual=Yes   
+New loadshape.S834a  npts=24 interval=[1] Pmult=[file=P_daily_S834a.csv] Qmult=[file=Q_daily_S834a.csv] UseActual=Yes
+New loadshape.S834b  npts=24 interval=[1] Pmult=[file=P_daily_S834b.csv] Qmult=[file=Q_daily_S834b.csv] UseActual=Yes
+New loadshape.S834c  npts=24 interval=[1] Pmult=[file=P_daily_S834c.csv] Qmult=[file=Q_daily_S834c.csv] UseActual=Yes
+New loadshape.S836a  npts=24 interval=[1] Pmult=[file=P_daily_S836a.csv] Qmult=[file=Q_daily_S836a.csv] UseActual=Yes
+New loadshape.S836b  npts=24 interval=[1] Pmult=[file=P_daily_S836b.csv] Qmult=[file=Q_daily_S836b.csv] UseActual=Yes 
+New loadshape.S836c  npts=24 interval=[1] Pmult=[file=P_daily_S836c.csv] Qmult=[file=Q_daily_S836c.csv] UseActual=Yes
+New loadshape.S838b  npts=24 interval=[1] Pmult=[file=P_daily_S838b.csv] Qmult=[file=Q_daily_S838b.csv] UseActual=Yes
+New loadshape.S840a  npts=24 interval=[1] Pmult=[file=P_daily_S840a.csv] Qmult=[file=Q_daily_S840a.csv] UseActual=Yes
+New loadshape.S840b  npts=24 interval=[1] Pmult=[file=P_daily_S840b.csv] Qmult=[file=Q_daily_S840b.csv] UseActual=Yes
+
+New loadshape.S840c  npts=24 interval=[1] Pmult=[file=P_daily_S840c.csv] Qmult=[file=Q_daily_S840c.csv] UseActual=Yes
+New loadshape.S842a  npts=24 interval=[1] Pmult=[file=P_daily_S842a.csv] Qmult=[file=Q_daily_S842a.csv] UseActual=Yes
+New loadshape.S844a  npts=24 interval=[1] Pmult=[file=P_daily_S844a.csv] Qmult=[file=Q_daily_S844a.csv] UseActual=Yes
+New loadshape.S844b  npts=24 interval=[1] Pmult=[file=P_daily_S844b.csv] Qmult=[file=Q_daily_S844b.csv] UseActual=Yes
+New loadshape.S844c  npts=24 interval=[1] Pmult=[file=P_daily_S844c.csv] Qmult=[file=Q_daily_S844c.csv] UseActual=Yes 
+New loadshape.S846b  npts=24 interval=[1] Pmult=[file=P_daily_S846b.csv] Qmult=[file=Q_daily_S846b.csv] UseActual=Yes 
+New loadshape.S846c  npts=24 interval=[1] Pmult=[file=P_daily_S846c.csv] Qmult=[file=Q_daily_S846c.csv] UseActual=Yes
+
+New loadshape.S848a  npts=24 interval=[1] Pmult=[file=P_daily_S848a.csv] Qmult=[file=Q_daily_S848a.csv] UseActual=Yes
+New loadshape.S848b  npts=24 interval=[1] Pmult=[file=P_daily_S848b.csv] Qmult=[file=Q_daily_S848b.csv] UseActual=Yes
+
+New loadshape.S848c  npts=24 interval=[1] Pmult=[file=P_daily_S848c.csv] Qmult=[file=Q_daily_S848c.csv] UseActual=Yes
+New loadshape.S854b  npts=24 interval=[1] Pmult=[file=P_daily_S854b.csv] Qmult=[file=Q_daily_S854b.csv] UseActual=Yes
+New loadshape.S856b  npts=24 interval=[1] Pmult=[file=P_daily_S856b.csv] Qmult=[file=Q_daily_S856b.csv] UseActual=Yes 
+New loadshape.S858a  npts=24 interval=[1] Pmult=[file=P_daily_S858a.csv] Qmult=[file=Q_daily_S858a.csv] UseActual=Yes
+New loadshape.S858b  npts=24 interval=[1] Pmult=[file=P_daily_S858b.csv] Qmult=[file=Q_daily_S858b.csv] UseActual=Yes
+New loadshape.S858c  npts=24 interval=[1] Pmult=[file=P_daily_S858c.csv] Qmult=[file=Q_daily_S858c.csv] UseActual=Yes  
+New loadshape.S860a  npts=24 interval=[1] Pmult=[file=P_daily_S860a.csv] Qmult=[file=Q_daily_S860a.csv] UseActual=Yes 
+New loadshape.S860b  npts=24 interval=[1] Pmult=[file=P_daily_S860b.csv] Qmult=[file=Q_daily_S860b.csv] UseActual=Yes  
+New loadshape.S860c  npts=24 interval=[1] Pmult=[file=P_daily_S860c.csv] Qmult=[file=Q_daily_S860c.csv] UseActual=Yes
+New loadshape.S862b  npts=24 interval=[1] Pmult=[file=P_daily_S862b.csv] Qmult=[file=Q_daily_S862b.csv] UseActual=Yes
+New loadshape.S864a  npts=24 interval=[1] Pmult=[file=P_daily_S864a.csv] Qmult=[file=Q_daily_S864a.csv] UseActual=Yes
+
+New loadshape.S890a  npts=24 interval=[1] Pmult=[file=P_daily_S890a.csv] Qmult=[file=Q_daily_S890a.csv] UseActual=Yes
+
+New loadshape.S890b  npts=24 interval=[1] Pmult=[file=P_daily_S890b.csv] Qmult=[file=Q_daily_S890b.csv] UseActual=Yes 
+
+New loadshape.S890c  npts=24 interval=[1] Pmult=[file=P_daily_S890c.csv] Qmult=[file=Q_daily_S890c.csv] UseActual=Yes  
+
+
+
+Load.S802b.Daily=S802b
+Load.S802c.Daily=S802c
+Load.S806b.Daily=S806b
+Load.S806c.Daily=S806c
+Load.S808b.Daily=S808b
+Load.S810b.Daily=S810b
+Load.S816b.Daily=S816b
+Load.S818a.Daily=S818a
+Load.S820a.Daily=S820a
+Load.S822a.Daily=S822a
+Load.S824b.Daily=S824b
+Load.S824c.Daily=S824c
+Load.S826b.Daily=S826b
+Load.S828a.Daily=S828a
+Load.S828c.Daily=S828c
+Load.S830a.Daily=S830a
+Load.S830b.Daily=S830b
+Load.S830c.Daily=S830c
+Load.S832a.Daily=S832a
+Load.S832b.Daily=S832b
+Load.S832c.Daily=S832c
+Load.S834a.Daily=S834a
+Load.S834b.Daily=S834b
+Load.S834c.Daily=S834c
+Load.S836a.Daily=S836a
+Load.S836b.Daily=S836b 
+Load.S836c.Daily=S836c
+Load.S838b.Daily=S838b
+Load.S840a.Daily=S840a
+Load.S840b.Daily=S840b
+Load.S840c.Daily=S840c
+Load.S842a.Daily=S842a
+Load.S844a.Daily=S844a
+Load.S844b.Daily=S844b
+Load.S844c.Daily=S844c
+Load.S846b.Daily=S846b
+Load.S846c.Daily=S846c
+Load.S848a.Daily=S848a
+Load.S848b.Daily=S848b
+Load.S848c.Daily=S848c
+Load.S854b.Daily=S854b
+Load.S856b.Daily=S856b
+Load.S858a.Daily=S858a
+Load.S858b.Daily=S858b
+Load.S858c.Daily=S858c
+Load.S860a.Daily=S860a
+Load.S860b.Daily=S860b  
+Load.S860c.Daily=S860c
+Load.S862b.Daily=S862b
+Load.S864a.Daily=S864a
+Load.S890a.Daily=S890a
+Load.S890b.Daily=S890b 
+
+Load.S890c.Daily=S890c 
+

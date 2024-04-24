@@ -1,0 +1,22 @@
+!------------------------------------------------------------------------------------
+! This script runs the IEEE 34 Bus test case (Mod 1)
+!------------------------------------------------------------------------------------
+
+! change the path name to match where it is actually installed on your computer
+
+clear 
+
+Compile IEEE34Master.dss
+
+New Energymeter.M1  Line.L1  1
+
+
+Redirect SetDailyLoadShape.DSS
+Set mode=time number=1440 stepsize=1m
+Set time=(5, 15)
+
+solve
+Buscoords IEEE34_BusXY.csv
+
+Show voltage LN Nodes
+

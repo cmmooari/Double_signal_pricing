@@ -1,0 +1,116 @@
+! Standard (Mod 1) model of IEEE 34 Bus Test Feeder
+
+! Note: Mod 2 better accounts for distributed load.
+
+Clear
+Set DefaultBaseFrequency=60
+
+New object=circuit.ieee34-1
+~ basekv=4.16 Bus1=800 pu=1.00 R1=0 X1=0.0001 R0=0 X0=0.0001
+
+! Substation Transformer  -- Modification: Make source very stiff by defining a tiny leakage Z
+! New Transformer.SubXF Phases=3 Windings=2 Xhl=0.01    ! normally 8
+! ~ wdg=1 bus=sourcebus conn=Delta kv=69    kva=25000   %r=0.0005   !reduce %r, too
+! ~ wdg=2 bus=800       conn=wye   kv=24.9  kva=25000   %r=0.0005
+
+! import line codes with phase impedance matrices
+Redirect        IEEELineCodes.dss   ! revised according to Later test feeder doc
+
+! Lines
+New Line.L1     Phases=3 Bus1=800.1.2.3  Bus2=802.1.2.3  LineCode=300  Length=2.58   units=kft
+New Line.L2     Phases=3 Bus1=802.1.2.3  Bus2=806.1.2.3  LineCode=300  Length=1.73   units=kft
+New Line.L3     Phases=3 Bus1=806.1.2.3  Bus2=808.1.2.3  LineCode=300  Length=32.23   units=kft
+New Line.L4     Phases=1 Bus1=808.2      Bus2=810.2      LineCode=303  Length=5.804   units=kft
+New Line.L5     Phases=3 Bus1=808.1.2.3  Bus2=812.1.2.3  LineCode=300  Length=37.5   units=kft
+New Line.L6     Phases=3 Bus1=812.1.2.3  Bus2=814.1.2.3  LineCode=300  Length=29.73   units=kft
+New Line.L7     Phases=3 Bus1=814.1.2.3 Bus2=850.1.2.3  LineCode=301  Length=0.01   units=kft
+New Line.L8     Phases=1 Bus1=816.1      Bus2=818.1      LineCode=302  Length=1.71   units=kft
+New Line.L9     Phases=3 Bus1=816.1.2.3  Bus2=824.1.2.3  LineCode=301  Length=10.21   units=kft
+New Line.L10    Phases=1 Bus1=818.1      Bus2=820.1      LineCode=302  Length=48.15   units=kft
+New Line.L11    Phases=1 Bus1=820.1      Bus2=822.1      LineCode=302  Length=13.74   units=kft
+New Line.L12    Phases=1 Bus1=824.2      Bus2=826.2      LineCode=303  Length=3.03   units=kft
+New Line.L13    Phases=3 Bus1=824.1.2.3  Bus2=828.1.2.3  LineCode=301  Length=0.84   units=kft
+New Line.L14    Phases=3 Bus1=828.1.2.3  Bus2=830.1.2.3  LineCode=301  Length=20.44   units=kft
+New Line.L15    Phases=3 Bus1=830.1.2.3  Bus2=854.1.2.3  LineCode=301  Length=0.52   units=kft
+New Line.L16    Phases=3 Bus1=832.1.2.3  Bus2=858.1.2.3  LineCode=301  Length=4.9   units=kft
+New Line.L17    Phases=3 Bus1=832.1.2.3  Bus2=888.1.2.3  LineCode=301  Length=8.0   units=kft
+New Line.L18    Phases=3 Bus1=834.1.2.3  Bus2=860.1.2.3  LineCode=301  Length=2.02   units=kft
+New Line.L19    Phases=3 Bus1=834.1.2.3  Bus2=842.1.2.3  LineCode=301  Length=0.28   units=kft
+New Line.L20    Phases=3 Bus1=836.1.2.3  Bus2=840.1.2.3  LineCode=301  Length=0.86   units=kft
+New Line.L21    Phases=3 Bus1=836.1.2.3  Bus2=862.1.2.3  LineCode=301  Length=0.28   units=kft
+New Line.L22    Phases=3 Bus1=842.1.2.3  Bus2=844.1.2.3  LineCode=301  Length=1.35   units=kft
+New Line.L23    Phases=3 Bus1=844.1.2.3  Bus2=846.1.2.3  LineCode=301  Length=3.64   units=kft
+New Line.L24    Phases=3 Bus1=846.1.2.3  Bus2=848.1.2.3  LineCode=301  Length=0.53   units=kft
+New Line.L25    Phases=3 Bus1=850.1.2.3  Bus2=816.1.2.3  LineCode=301  Length=0.31   units=kft
+New Line.L26    Phases=3 Bus1=852.1.2.3 Bus2=832.1.2.3  LineCode=301  Length=0.01   units=kft
+New Line.L27    Phases=1 Bus1=854.2      Bus2=856.2      LineCode=303  Length=23.33   units=kft
+New Line.L28    Phases=3 Bus1=854.1.2.3  Bus2=852.1.2.3  LineCode=301  Length=36.83   units=kft
+New Line.L29    Phases=1 Bus1=858.1      Bus2=864.1      LineCode=303  Length=1.62   units=kft
+New Line.L30    Phases=3 Bus1=858.1.2.3  Bus2=834.1.2.3  LineCode=301  Length=5.83   units=kft
+New Line.L31    Phases=3 Bus1=860.1.2.3  Bus2=836.1.2.3  LineCode=301  Length=2.68   units=kft
+New Line.L32    Phases=1 Bus1=862.2      Bus2=838.2      LineCode=304  Length=4.86   units=kft
+New Line.L33    Phases=3 Bus1=888.1.2.3  Bus2=890.1.2.3  LineCode=300  Length=10.56   units=kft
+
+
+! spot loads
+New Load.S802b      Bus1=802.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S802c      Bus1=802.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80 
+New Load.S806b      Bus1=806.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S806c      Bus1=806.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S808b      Bus1=808.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S810b      Bus1=810.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S816b      Bus1=816.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S818a      Bus1=818.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S820a      Bus1=820.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S822a      Bus1=822.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S824b      Bus1=824.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S824c      Bus1=824.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S826b      Bus1=826.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S828a      Bus1=828.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S828c      Bus1=828.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S830a      Bus1=830.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+
+New Load.S830b      Bus1=830.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S830c      Bus1=830.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S832a      Bus1=832.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S832b      Bus1=832.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S832c      Bus1=832.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80  
+New Load.S834a      Bus1=834.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S834b      Bus1=834.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S834c      Bus1=834.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S836a      Bus1=836.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S836b      Bus1=836.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S836c      Bus1=836.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S838b      Bus1=838.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S840a      Bus1=840.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S840b      Bus1=840.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S840c      Bus1=840.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80 
+New Load.S842a      Bus1=842.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S844a      Bus1=844.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S844b      Bus1=844.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S844c      Bus1=844.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S846b      Bus1=846.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S846c      Bus1=846.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S848a      Bus1=848.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S848b      Bus1=848.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+
+New Load.S848c      Bus1=848.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80 
+New Load.S854b      Bus1=854.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S856b      Bus1=856.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S858a      Bus1=858.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S858b      Bus1=858.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S858c      Bus1=858.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S860a      Bus1=860.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S860b      Bus1=860.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80 
+New Load.S860c      Bus1=860.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80  
+New Load.S862b      Bus1=862.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S864a      Bus1=864.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+
+New Load.S890a      Bus1=890.1 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+
+New Load.S890b      Bus1=890.2 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+New Load.S890c      Bus1=890.3 Phases=1 Conn=Wye   Model=1 kV= 2.40177711983 Vminpu=0.80
+
+! let the DSS estimate voltage bases automatically
+Set VoltageBases = [4.16]
+CalcVoltageBases
